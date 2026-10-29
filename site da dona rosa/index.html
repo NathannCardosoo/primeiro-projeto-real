@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Delícias da Rosa | Cardápio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  /* --olive = cor principal (rosa); --gold = cor dos preços (azul jeans) */
+  --bg:#FBF2F1; --surface:#FFF9F8; --ink:#3A2A2E; --muted:#7C6A6E;
+  --olive:#A8426F; --olive-ink:#FFF5F8; --gold:#2F5F8A; --line:#EBD3D8;
+  --head:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#241A1E; --surface:#2D2126; --ink:#F6E8EB; --muted:#BBA3A9;
+    --olive:#E58FB1; --olive-ink:#2A1620; --gold:#8DB6E0; --line:#43323A;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#241A1E; --surface:#2D2126; --ink:#F6E8EB; --muted:#BBA3A9;
+  --olive:#E58FB1; --olive-ink:#2A1620; --gold:#8DB6E0; --line:#43323A;
+  color-scheme:dark;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 56px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.5}
+header{background:var(--olive);color:var(--olive-ink);padding:44px 22px 36px}
+.wrap{max-width:640px;margin:0 auto}
+header h1{font-family:var(--head);font-weight:700;font-size:clamp(2.4rem,9vw,3.6rem);line-height:1;margin:0 0 10px;letter-spacing:-.02em}
+header p{margin:0;opacity:.85;font-size:1rem}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:6px;padding:10px 22px;overflow-x:auto}
+nav a{flex:none;color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem;padding:7px 14px;border-radius:999px;border:1px solid var(--line)}
+nav a:hover,nav a:focus-visible{background:var(--olive);color:var(--olive-ink);border-color:var(--olive);outline:none}
+main{padding:8px 22px 48px}
+section{padding-top:34px}
+h2{font-family:var(--head);font-weight:700;font-size:1.7rem;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:.95rem;margin:0 0 18px}
+.item{display:flex;align-items:baseline;gap:10px;padding:2px 0}
+.item h3{font-family:var(--head);font-weight:500;font-size:1.2rem;margin:0}
+.dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px);min-width:16px}
+.price{font-family:var(--head);font-weight:700;font-size:1.2rem;color:var(--gold);white-space:nowrap}
+.desc{margin:2px 0 22px;color:var(--muted);max-width:52ch}
+.salgados{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.salgados li{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.salgados li:last-child{border-bottom:0}
+.tag{color:var(--muted);font-size:.88rem}
+.note{margin-top:12px;color:var(--muted);font-size:.92rem}
+footer{border-top:1px solid var(--line);padding:22px;text-align:center;color:var(--muted);font-size:.92rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1 id="nome">Delícias da Rosa</h1>
+    <p>Em breve em Mateus Leme – MG</p>
+  </div>
+</header>
+<nav aria-label="Categorias">
+  <div class="wrap">
+    <a href="#salgados">Salgados</a>
+    <a href="#pratos">Pratos</a>
+  </div>
+</nav>
+<main>
+  <div class="wrap">
+    <section id="salgados">
+      <h2>Mini salgados</h2>
+      <p class="sub">R$ 1,00 cada unidade</p>
+      <ul class="salgados">
+        <li><span>Coxinha</span><span class="tag">frita</span></li>
+        <li><span>Kibe</span><span class="tag">frito</span></li>
+        <li><span>Pastel português de carne moída</span><span class="tag">frito</span></li>
+        <li><span>Empadinha de frango</span><span class="tag">assada</span></li>
+        <li><span>Esfiha de frango</span><span class="tag">assada</span></li>
+      </ul>
+    </section>
+
+    <section id="pratos">
+      <h2>Pratos</h2>
+      <p class="sub">Feitos na chapa</p>
+
+      <div class="item"><h3>Macarrão na chapa</h3><span class="dots"></span><span class="price">R$ 27,00</span></div>
+      <p class="desc">Macarrão com milho verde, azeitona, frango desfiado, presunto, bacon, cebola e ervilha. Finalizado com uma fatia de mussarela por cima.</p>
+
+      <div class="item"><h3>Feijão tropeiro</h3><span class="dots"></span><span class="price">R$ 25,00</span></div>
+      <p class="desc">Feijão com linguiça calabresa, carne de porco, bacon e torresmo. Acompanha couve e ovo frito na chapa.</p>
+    </section>
+  </div>
+</main>
+<footer>Cardápio em atualização. Os valores podem mudar.</footer>
+<script>
+// Para trocar o nome do estabelecimento, edite o texto abaixo.
+var NOME = "Delícias da Rosa";
+if (NOME) { document.getElementById("nome").textContent = NOME; document.title = NOME + " | Cardápio"; }
+</script>
+</body>
+</html>
+
