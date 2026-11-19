@@ -1,15 +1,18 @@
-# Site da Dona Rosa
+# Cardápio Digital – Delícias da Rosa
 
-Site desenvolvido para servir como cardápio no negócio da Dona Rosa.
+Cardápio online feito para a Delícias da Rosa, de Mateus Leme – MG.
 
 ## O que tem no site
-- Página inicial
-- Produtos e serviços
-
+- Seção de mini salgados (coxinha, kibe, pastel, empadinha e esfiha)
+- Seção de pratos feitos na chapa, com foto, descrição e preço
+- Menu de navegação fixo no topo
+- Layout responsivo, pensado para celular
+- Modo escuro automático
 
 ## Tecnologias
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 
-## AutorNathan Cardoso de Oliveira Barbosa
+## Autor
+Nathan Cardoso de Oliveira Barbosa
